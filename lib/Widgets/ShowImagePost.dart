@@ -101,6 +101,7 @@ class ShowImagePost extends StatelessWidget {
                                   if (state is Getlocation) {
                                     userLocationl = state.cuntry;
                                     await userPostes.add({
+                                      'color':0,
                                       'id': '',
                                       'imageurl': imageurl,
                                       'userid': userId,
@@ -117,6 +118,7 @@ class ShowImagePost extends StatelessWidget {
                                   }
                                 else  if (state is getVideoState) {
                                     await userPostes.add({
+                                      'color':0,
                                       'id': '',
                                       'userid': userId,
                                       'vedioUrl':'${state.videoUrl}',
@@ -132,6 +134,7 @@ class ShowImagePost extends StatelessWidget {
                                     });
                                   } else {
                                     await userPostes.add({
+                                      'color':0,
                                       'id': '',
                                       'imageurl': imageurl,
                                       'userid': userId,

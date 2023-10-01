@@ -86,9 +86,11 @@ class showModelButtomSheet extends StatelessWidget {
                                         .emit(GetbackImage(
                                             BackImage: newbackGround));
  */
-                                    List userLikes = [];
+                                    List<dynamic> myList = [];
                                     await userPostes.add({
+                                      'color':0,
                                       'id' : '',
+                                      'color':0,
                                       'imageurl': profilePic,
                                       'userid': userId,
                                       'postState': '$stat',
@@ -99,7 +101,7 @@ class showModelButtomSheet extends StatelessWidget {
                                       'name': username,
                                       'profileurl': userpic,
                                       'aboutimage': mind.text,
-                                      'list of likes': userLikes
+                                      'likeslist': myList
                                     });
                                     mind.clear();
                                     Get.back();
