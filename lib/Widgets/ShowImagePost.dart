@@ -94,6 +94,7 @@ class ShowImagePost extends StatelessWidget {
                                 onPressed: () async {
                                   print('MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM$state');
                                   print('WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW$userId');
+                                  BlocProvider.of<GetFireDataCubit>(context).emit(GetImageContainer(ContainerUrl: ''));
 
                                   Loading().loading();
                                   List<dynamic> myList = [];

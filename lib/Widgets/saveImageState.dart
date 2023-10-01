@@ -101,7 +101,7 @@ class saveImageContent extends StatelessWidget {
     return snapshot.data!.docs[index].get('postState') != 'updateProfile'
         ? Container(
             width: w,
-            height: 365,
+            height: 400,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20), color: Colors.black12),
             margin: EdgeInsets.all(5),

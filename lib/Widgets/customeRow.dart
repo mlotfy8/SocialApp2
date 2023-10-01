@@ -353,21 +353,22 @@ class customeRow extends StatelessWidget {
                                               .doc('$id')
                                               .get()
                                               .then((value) async {
-                                              String id = value.get('id');
-                                              bool islike = value.get('islike');
-                                              int likes = value.get('likes');
-                                              String name = value.get('name');
-                                              String postState =
+                                                print('RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR');
+                                              var id = value.get('id');
+                                                var likes = value.get('likes');
+                                                var name = value.get('name');
+                                                var postState =
                                                   value.get('postState');
-                                              String profileurl =
+                                                var profileurl =
                                                   value.get('profileurl');
-                                              String time = value.get('time');
-                                              String post = value.get('post');
-                                              String userid =
+                                                var time = value.get('time');
+                                                var post = value.get('post');
+                                                var userid =
                                                   value.get('userid');
+                                                var color =
+                                                value.get('color');
                                               await savePostes.add({
                                                 'id': '$id',
-                                                'islike': '$islike',
                                                 'userid': '$userid',
                                                 'likes': '$likes',
                                                 'name': '$name',
@@ -375,35 +376,37 @@ class customeRow extends StatelessWidget {
                                                 'time': '$time',
                                                 'postState': '$postState',
                                                 'saveId': '$userId',
-                                                'post': '$post'
+                                                'post': '$post',
+                                              'color': '$color'
+
                                               });
                                             })
                                           : await userPostes
                                               .doc('$id')
                                               .get()
                                               .then((value) async {
-                                              String aboutimage =
+                                        var aboutimage =
                                                   value.get('aboutimage');
-                                              String email = value.get('email');
-                                              String id = value.get('id');
-                                              String imageurl =
+                                        var email = value.get('email');
+                                        var id = value.get('id');
+                                        var imageurl =
                                                   value.get('imageurl');
-                                              bool islike = value.get('islike');
-                                              int likes = value.get('likes');
-                                              String name = value.get('name');
-                                              String postState =
+                                        var likes = value.get('likes');
+                                        var name = value.get('name');
+                                        var postState =
                                                   value.get('postState');
-                                              String profileurl =
+                                        var profileurl =
                                                   value.get('profileurl');
-                                              String time = value.get('time');
-                                              String userid =
+                                        var color =
+                                        value.get('color');
+                                        var time = value.get('time');
+                                        var userid =
                                                   value.get('userid');
                                               await savePostes.add({
                                                 'aboutimage': aboutimage,
                                                 'email': email,
                                                 'id': id,
                                                 'imageurl': imageurl,
-                                                'islike': islike,
                                                 'likes': likes,
                                                 'name': name,
                                                 'profileurl': profileurl,
@@ -411,6 +414,8 @@ class customeRow extends StatelessWidget {
                                                 'userid': userid,
                                                 'savedId': userId,
                                                 'postState': postState,
+                                                'color': color,
+
                                               });
                                             });
                                       Get.snackbar('The post has been saved',
